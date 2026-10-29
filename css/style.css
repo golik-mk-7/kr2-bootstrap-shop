@@ -1,41 +1,108 @@
-/* Фирменные стили Marydivita поверх Bootstrap */
+/* =========================================
+   Фирменные стили Marydivita поверх Bootstrap
+   ========================================= */
+
 :root {
-    --md-bg: #ffb271;
-    --md-surface: #ef9950;
-    --md-text: #673a09;
-    --md-primary: #f50909;
+    --md-bg: #ffb271;          /* Оранжевый фон страницы */
+    --md-surface: #ef9950;     /* Цвет шапки, подвала и карточек */
+    --md-text: #673a09;        /* Коричневый текст */
+    --md-primary: #f50909;     /* Красный акцент (кнопки) */
     --md-primary-dark: #c40707;
 }
 
+/* 1. Общие стили страницы */
 body {
-    background-color: var(--md-bg);
+    background-color: var(--md-bg) !important; /* Перебиваем белый фон Bootstrap */
     color: var(--md-text);
     font-family: Georgia, "Times New Roman", serif;
 }
 
-/* цвета Bootstrap под наш стиль */
-.bg-primary { background-color: var(--md-primary) !important; }
-.text-primary { color: var(--md-primary) !important; }
-.btn-primary {
-    background-color: var(--md-primary);
-    border-color: var(--md-primary);
-}
-.btn-primary:hover {
-    background-color: var(--md-primary-dark);
-    border-color: var(--md-primary-dark);
-}
-.btn-outline-primary {
-    color: var(--md-primary);
-    border-color: var(--md-primary);
-}
-.btn-outline-primary:hover {
-    background-color: var(--md-primary);
-    color: #fff;
+h1, h2, h3, h4, h5, .navbar-brand {
+    color: #000 !important; /* Черные заголовки как в КР1 */
+    font-weight: bold;
 }
 
-/* Стили для карточек и шапки */
-.navbar-dark .navbar-nav .nav-link.active { color: var(--md-bg); font-weight: bold; }
-.card { background-color: var(--md-surface); border: 1px solid var(--md-text); }
-.card-img-top { height: 200px; object-fit: cover; }
-.accordion-button { background-color: var(--md-surface); color: var(--md-text); }
-.accordion-button:not(.collapsed) { background-color: #e68a3c; color: var(--md-text); }
+/* 2. Шапка и подвал (делаем их оранжевыми) */
+.bg-dark {
+    background-color: var(--md-surface) !important;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--md-text) !important;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+}
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #000 !important;
+}
+.navbar-brand {
+    color: #000 !important;
+}
+
+/* 3. Кнопки */
+.btn-primary {
+    background-color: var(--md-primary) !important;
+    border-color: var(--md-primary) !important;
+    border-radius: 999px !important; /* Круглые кнопки */
+    color: white !important;
+}
+.btn-primary:hover {
+    background-color: var(--md-primary-dark) !important;
+}
+.btn-outline-primary {
+    color: var(--md-primary) !important;
+    border-color: var(--md-primary) !important;
+    border-radius: 999px !important;
+}
+.btn-outline-primary:hover {
+    background-color: var(--md-primary) !important;
+    color: white !important;
+}
+
+/* 4. Карточки товаров */
+.card {
+    background-color: var(--md-surface) !important;
+    border: 1px solid var(--md-text) !important;
+}
+.card-text {
+    color: var(--md-text) !important;
+}
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* 5. Alert (сообщения) */
+.alert-info, .alert-warning {
+    background-color: #ffd0a0;
+    color: var(--md-text);
+    border-color: var(--md-text);
+}
+
+/* 6. Формы и Аккордеон */
+.form-control, .form-select {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--md-text);
+    border-radius: 0;
+    color: var(--md-text);
+}
+.form-control:focus, .form-select:focus {
+    box-shadow: none;
+    border-bottom: 2px solid var(--md-primary);
+}
+.accordion-button {
+    background-color: var(--md-surface);
+    color: var(--md-text);
+}
+.accordion-button:not(.collapsed) {
+    background-color: #e68a3c;
+    color: var(--md-text);
+}
+
+/* 7. Модальное окно */
+.modal-content {
+    background-color: #ffd0a0;
+    color: var(--md-text);
+}

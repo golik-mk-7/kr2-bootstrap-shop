@@ -3,16 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Каталог – Marydivita</title>
+    <title>Каталог – Marydivita Bootstrap</title>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body { background-color: #ffb271 !important; color: #673a09 !important; font-family: Georgia, "Times New Roman", serif; }
+        h1, h2, h3, h4, h5, .navbar-brand { color: #000 !important; }
+        .bg-dark { background-color: #ef9950 !important; }
+        .navbar-dark .navbar-nav .nav-link { color: #673a09 !important; text-decoration: underline; }
+        .navbar-dark .navbar-nav .nav-link.active { color: #000 !important; font-weight: bold; }
+        
+        .btn-primary { background-color: #f50909 !important; border-color: #f50909 !important; border-radius: 999px !important; color: #ef9950 !important; font-weight: bold; transition: 0.3s;}
+        .btn-primary:hover { background-color: #c40707 !important; color: #fff !important;}
+        
+        .btn-outline-primary { color: #ef9950 !important; border-color: #f50909 !important; border-radius: 999px !important; background-color: #f50909 !important; font-weight: bold; transition: 0.3s;}
+        .btn-outline-primary:hover { background-color: #c40707 !important; color: #fff !important; border-color: #c40707 !important; }
+        
+        .card { background-color: #ef9950 !important; border: 1px solid #673a09 !important; }
+        .card-text { color: #673a09 !important; }
+        
+        .alert-success { background-color: #d1e7dd; color: #0f5132; border-color: #badbcc; }
+    </style>
 </head>
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">Marydivita</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="mainNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
@@ -25,58 +47,111 @@
     </nav>
 
     <main class="container my-5">
-        <!-- Сообщение Alert -->
-        <div class="alert alert-warning" role="alert">
-            Внимание! Это учебный каталог. Все котята вымышлены.
+        <div class="alert alert-success" role="alert">
+            <strong>Внимание!</strong> Все котята, представленные в каталоге, реально существуют, выращены в нашем питомнике и готовы к переезду в новый дом.
         </div>
 
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h1 class="h2 mb-0">Каталог котят</h1>
-            <a href="order.html" class="btn btn-outline-primary">Оставить заявку</a>
+            <a href="order.html" class="btn btn-primary">Оставить заявку</a>
         </div>
 
         <div class="row g-4">
-            <!-- Товар 1 -->
+            <!-- 1 -->
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card h-100 shadow-sm">
-                    <img src="images/cat-1.jpg" class="card-img-top" alt="Котёнок 1">
+                    <img src="images/cat-1.jpg" class="card-img-top" alt="Британская шиншилла" style="height: 250px; object-fit: cover;">
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Котёнок 1</h5>
-                        <p class="card-text">Бенгальский.</p>
-                        <p class="fw-bold mt-auto">10 000 руб.</p>
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="card-title mb-0">Британская шиншилла</h5>
+                            <span class="badge bg-success">Девочка</span>
+                        </div>
+                        <p class="card-text">Нежный взгляд и роскошная шубка.</p>
+                        <p class="fw-bold fs-5 mt-auto">100 000 руб.</p>
                         <a href="product.html" class="btn btn-primary">Подробнее</a>
                     </div>
                 </div>
             </div>
-            <!-- Товар 2 -->
+            <!-- 2 -->
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card h-100 shadow-sm">
-                    <img src="images/cat-2.jpg" class="card-img-top" alt="Котёнок 2">
+                    <img src="images/cat-2.jpg" class="card-img-top" alt="Шотландский колорпоинт" style="height: 250px; object-fit: cover;">
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Котёнок 2</h5>
-                        <p class="card-text">Британский.</p>
-                        <p class="fw-bold mt-auto">15 000 руб.</p>
-                        <a href="product.html" class="btn btn-primary">Подробнее</a>
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="card-title mb-0">Шотландский колорпоинт</h5>
+                            <span class="badge bg-warning text-dark">Мальчик</span>
+                        </div>
+                        <p class="card-text">Черный колорпоинт с голубыми глазами.</p>
+                        <p class="fw-bold fs-5 mt-auto">150 000 руб.</p>
+                        <a href="product-2.html" class="btn btn-primary">Подробнее</a>
                     </div>
                 </div>
             </div>
-            <!-- Товар 3 -->
+            <!-- 3 -->
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card h-100 shadow-sm">
-                    <img src="images/cat-3.jpg" class="card-img-top" alt="Котёнок 3">
+                    <img src="images/cat-3.jpg" class="card-img-top" alt="Абиссинский соррель" style="height: 250px; object-fit: cover;">
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Котёнок 3</h5>
-                        <p class="card-text">Шотландский.</p>
-                        <p class="fw-bold mt-auto">20 000 руб.</p>
-                        <a href="product.html" class="btn btn-primary">Подробнее</a>
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="card-title mb-0">Абиссинский соррель</h5>
+                            <span class="badge bg-info text-dark">Мальчик</span>
+                        </div>
+                        <p class="card-text">Активный и невероятно умный.</p>
+                        <p class="fw-bold fs-5 mt-auto">200 000 руб.</p>
+                        <a href="product-3.html" class="btn btn-primary">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 4 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/cat-4.jpg" class="card-img-top" alt="Абиссинский дикий" style="height: 250px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="card-title mb-0">Абиссинский дикий</h5>
+                            <span class="badge bg-success">Девочка</span>
+                        </div>
+                        <p class="card-text">Дикий окрас и неукротимая энергия.</p>
+                        <p class="fw-bold fs-5 mt-auto">250 000 руб.</p>
+                        <a href="product-4.html" class="btn btn-primary">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 5 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/cat-5.jpg" class="card-img-top" alt="Бенгальский" style="height: 250px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="card-title mb-0">Бенгальский</h5>
+                            <span class="badge bg-success">Девочка</span>
+                        </div>
+                        <p class="card-text">Черная розетка на золоте.</p>
+                        <p class="fw-bold fs-5 mt-auto">300 000 руб.</p>
+                        <a href="product-5.html" class="btn btn-primary">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 6 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/cat-6.jpg" class="card-img-top" alt="Бурма" style="height: 250px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="card-title mb-0">Бурма шоколадная</h5>
+                            <span class="badge bg-success">Девочка</span>
+                        </div>
+                        <p class="card-text">Редкий шоколадный окрас.</p>
+                        <p class="fw-bold fs-5 mt-auto">350 000 руб.</p>
+                        <a href="product-6.html" class="btn btn-primary">Подробнее</a>
                     </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="bg-dark text-white text-center py-4 mt-5">
-        <p class="mb-0">&copy; 2026 Питомник Marydivita.</p>
+    <footer class="bg-dark text-center py-4 mt-5">
+        <p class="mb-0 text-dark fw-bold">&copy; 2026 Питомник Marydivita.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
