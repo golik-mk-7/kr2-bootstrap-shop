@@ -1,0 +1,41 @@
+/* Фирменные стили Marydivita поверх Bootstrap */
+:root {
+    --md-bg: #ffb271;
+    --md-surface: #ef9950;
+    --md-text: #673a09;
+    --md-primary: #f50909;
+    --md-primary-dark: #c40707;
+}
+
+body {
+    background-color: var(--md-bg);
+    color: var(--md-text);
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* цвета Bootstrap под наш стиль */
+.bg-primary { background-color: var(--md-primary) !important; }
+.text-primary { color: var(--md-primary) !important; }
+.btn-primary {
+    background-color: var(--md-primary);
+    border-color: var(--md-primary);
+}
+.btn-primary:hover {
+    background-color: var(--md-primary-dark);
+    border-color: var(--md-primary-dark);
+}
+.btn-outline-primary {
+    color: var(--md-primary);
+    border-color: var(--md-primary);
+}
+.btn-outline-primary:hover {
+    background-color: var(--md-primary);
+    color: #fff;
+}
+
+/* Стили для карточек и шапки */
+.navbar-dark .navbar-nav .nav-link.active { color: var(--md-bg); font-weight: bold; }
+.card { background-color: var(--md-surface); border: 1px solid var(--md-text); }
+.card-img-top { height: 200px; object-fit: cover; }
+.accordion-button { background-color: var(--md-surface); color: var(--md-text); }
+.accordion-button:not(.collapsed) { background-color: #e68a3c; color: var(--md-text); }
